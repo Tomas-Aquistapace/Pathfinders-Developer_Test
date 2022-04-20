@@ -5,29 +5,39 @@ using UnityEngine;
 public class ElementsGenerator : MonoBehaviour
 {
     [Header("Elements")]
-    [SerializeField] int numberOfElements = 50;
-    [SerializeField] private GameObject[] prefElements;
-    
-    private GameObject prefElement;
+    [SerializeField] private GameObject prefElement;
+    [SerializeField] private int numberOfElements = 0;
+    [SerializeField] private float spawnDistance = 2f;
+    [SerializeField] private float spawnYpos = 2f;
 
     // =============================
 
-    private Queue<GameObject> elementsQueue;
-    //private GridEditor gridEditor;
+    static Queue<GameObject> elementsQueue;
+    static GridManager gridGenerator;
+
+    static GameObject[] spawnTrans;
+
+    private GameObject spawnParent;
 
     // =============================
 
     public void Awake()
     {
-        Object pref = Resources.Load("Bridge/Piece_of_Bridge", typeof(GameObject));
-        prefElement = (GameObject)pref;
-
+        gridGenerator = GetComponent<GridManager>();
         elementsQueue = new Queue<GameObject>();
+
+        // ===================
+        // Create Objects:
+
+        GameObject elementsParent = new GameObject();
+        elementsParent.transform.parent = this.transform;
+        elementsParent.transform.name = "Elements Parent";
+
+        numberOfElements = gridGenerator.grid.Count;
 
         for (int i = 0; i < numberOfElements; i++)
         {
-            GameObject go = Instantiate(prefElement);
-            go.transform.parent = this.transform;
+            GameObject go = Instantiate(prefElement, elementsParent.transform);
 
             go.transform.name = prefElement.name + "_" + i;
 
@@ -35,49 +45,36 @@ public class ElementsGenerator : MonoBehaviour
 
             elementsQueue.Enqueue(go);
         }
+
+        // ====================
+        // Create the Spawns:
+
+        spawnParent = new GameObject();
+        spawnParent.transform.parent = this.transform;
+        spawnParent.transform.localPosition = Vector3.zero;
+        spawnParent.transform.name = "Spawn Parent";
+
+        spawnTrans = new GameObject[gridGenerator.gridSizeX];
+
+        for (int col = 0; col < gridGenerator.gridSizeX; col++)
+        {
+            spawnTrans[col] = new GameObject();
+            spawnTrans[col].transform.parent = spawnParent.transform;
+            spawnTrans[col].transform.name = "spawnPoint_" + col;
+            spawnTrans[col].transform.localPosition = new Vector2(col * spawnDistance, spawnYpos);
+        }
     }
 
-    private void Update()
+    static public ElementCell RespawnPiece(int column)
     {
-        //if (spawnerState != SpawnerState.Stop)
-        //{
-        //    timeBridge += Time.deltaTime;
-        //
-        //    if (timeBridge >= timeToRespawnBridge)
-        //    {
-        //        RespawnPiece();
-        //
-        //        timeToRespawnBridge = Random.Range(minTimeToRespawnBridge, maxTimeToRespawnBridge);
-        //
-        //        timeBridge = 0f;
-        //    }
-        //}
-    }
+        GameObject piece;
+        piece = elementsQueue.Dequeue();
 
-    public void RespawnPiece()
-    {
-        //GameObject piece;
-        //piece = elementsQueue.Dequeue();
+        piece.transform.position = spawnTrans[column].transform.position;
 
-        //float rand = Random.Range(-bridgeSpawner.localScale.x / 2, bridgeSpawner.localScale.x / 2);
-        //Vector3 newPos = new Vector3(rand, bridgeSpawner.position.y, bridgeSpawner.position.z);
+        piece.SetActive(true);
+        elementsQueue.Enqueue(piece);
 
-        //piece.transform.GetComponent<PieceController>().ResetState(newPos);
-
-        //switch (spawnerState)
-        //{
-        //    case SpawnerState.Initializing:
-
-        //        piece.SetActive(true);
-        //        elementsQueue.Enqueue(piece);
-
-        //        break;
-
-        //    case SpawnerState.Updating:
-
-        //        elementsQueue.Enqueue(piece);
-
-        //        break;
-        //}
+        return piece.GetComponent<ElementCell>();
     }
 }

@@ -1,22 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
     public ElementCell elementInTile;
     public int column = 0;
-    public int id = 0;
+    public int row = 0;
 
-    enum State
+    public enum State
     {
         Waiting,
         Full,
         Empty
     }
 
-    private State tileState;
-
+    public State tileState;
 
     // -------------------------------
 
@@ -25,22 +22,44 @@ public class Tile : MonoBehaviour
         tileState = State.Empty;
     }
 
-    private void Update()
+    public void UpdateTile(ref Tile lastTile, int col, int row)
     {
-        
-        if(tileState == State.Empty)
+        if (tileState == State.Empty && elementInTile == null)
         {
-            tileState = State.Waiting;
-
-            // GridGenerator.CallAnElement(column, id);
+            if (row >= 1)
+            {
+                if(lastTile.elementInTile != null && lastTile.elementInTile.MoveElement(this.transform.position))
+                {
+                    tileState = State.Waiting;
+                    elementInTile = lastTile.elementInTile;
+                    lastTile.elementInTile = null;
+                    lastTile.tileState = State.Empty;
+                }
+            }
+            else
+            {
+                tileState = State.Waiting;
+                elementInTile = ElementsGenerator.RespawnPiece(col);
+                elementInTile.MoveElement(this.transform.position);
+            }        
         }
-
+        else if(tileState == State.Waiting && elementInTile != null)
+        {
+            if(elementInTile.elementState == ElementCell.State.Stop)
+            {
+                tileState = State.Full;
+                elementInTile.elementState = ElementCell.State.Waiting;
+            }
+        }
+        else if(tileState == State.Full && elementInTile == null)
+        {
+            tileState = State.Empty;
+        }
     }
 
-
-    public void SetValues(int _column, int _id)
+    public void SetValues(int _column, int _row)
     {
         column = _column;
-        id = _id;
+        row = _row;
     }
 }

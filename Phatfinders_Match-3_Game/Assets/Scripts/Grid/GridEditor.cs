@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(GridGenerator))]
+[CustomEditor(typeof(GridManager))]
 public class GridEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        GridGenerator generator = (GridGenerator)target;
+        GridManager generator = (GridManager)target;
 
         if(GUILayout.Button("Create Grid"))
         {

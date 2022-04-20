@@ -7,14 +7,27 @@ public class ElementCell : MonoBehaviour
 {
     [SerializeField] private Sprite[] spritesElem;
     [SerializeField] private int elementID = 0;
+    [SerializeField] private float speed = 2;
 
     private SpriteRenderer spriteRenderer;
+
+    public enum State
+    {
+        Waiting,
+        Moving,
+        Stop
+    }
+
+    public State elementState = State.Waiting;
 
     // -----------------------------
 
     private void Awake()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        elementState = State.Waiting;
+
         ChageElement();
     }
 
@@ -28,9 +41,14 @@ public class ElementCell : MonoBehaviour
         
     }
 
-    public void MoveElement(Vector3 finalPos)
+    public bool MoveElement(Vector3 finalPos)
     {
-        StartCoroutine(Move(finalPos));
+        if(elementState == State.Waiting)
+        {
+            StartCoroutine(Move(finalPos));
+            return true;
+        }
+        return false;
     }
 
     // --------------------------
@@ -46,15 +64,19 @@ public class ElementCell : MonoBehaviour
     {
         float time = 0f;
 
-        Vector3 initialPos = transform.position;
+        Vector3 initialPos = transform.localPosition;
+
+        elementState = State.Moving;
 
         while (time < 1)
         {
-            time += Time.deltaTime;
+            time += Time.deltaTime * speed;
 
-            transform.position = Vector3.Lerp(initialPos, finalPos, time);
+            transform.localPosition = Vector3.Lerp(initialPos, finalPos, time);
             
             yield return null;
         }
+
+        elementState = State.Stop;
     }
 }
