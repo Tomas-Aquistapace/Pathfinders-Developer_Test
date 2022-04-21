@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,11 @@ using UnityEngine;
 
 public class ElementCell : MonoBehaviour
 {
+    public static Action<int, int> EarnPoints;
+
     [SerializeField] private Sprite[] spritesElem;
     [SerializeField] private int elementID = 0;
+    [SerializeField] private int totalPoints = 10;
     [SerializeField] private float speed = 2;
 
     private SpriteRenderer spriteRenderer;
@@ -54,13 +58,15 @@ public class ElementCell : MonoBehaviour
     public void DisableElement()
     {
         ElementsGenerator.RestartPiece(this.gameObject);
+
+        EarnPoints?.Invoke(elementID, totalPoints);
     }
 
     // --------------------------
 
     void ChageElement()
     {
-        elementID = Random.Range(1, spritesElem.Length);
+        elementID = UnityEngine.Random.Range(0, spritesElem.Length);
 
         spriteRenderer.sprite = spritesElem[elementID];
     }

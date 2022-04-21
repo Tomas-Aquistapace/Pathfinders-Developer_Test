@@ -130,11 +130,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritesElem:
-  - {fileID: 21300000, guid: 55a762da843945e48bd4c69698af33dc, type: 3}
-  - {fileID: 21300000, guid: 3d7e7bd5fe957fa45af3de84094e4b9e, type: 3}
-  - {fileID: 21300000, guid: 7d14354f082cd3a4db52e5c5461314d4, type: 3}
-  - {fileID: 21300000, guid: 662f4158490ba9b4ba9faf02cb0d47d9, type: 3}
   - {fileID: 21300000, guid: eb1634445262af34da1820e73d2f3d4a, type: 3}
+  - {fileID: 21300000, guid: 662f4158490ba9b4ba9faf02cb0d47d9, type: 3}
+  - {fileID: 21300000, guid: 7d14354f082cd3a4db52e5c5461314d4, type: 3}
+  - {fileID: 21300000, guid: 3d7e7bd5fe957fa45af3de84094e4b9e, type: 3}
+  - {fileID: 21300000, guid: 0331da4cc55f124498f6a4dac8b9c6cb, type: 3}
   elementID: 0
+  totalPoints: 10
   speed: 2.5
   elementState: 0

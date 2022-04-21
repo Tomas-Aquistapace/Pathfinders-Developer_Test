@@ -5,7 +5,6 @@ using UnityEngine;
 public class LineRendererPath : MonoBehaviour
 {
     [SerializeField] private GameObject pointPref;
-    [SerializeField] private int maxMatchTouchs = 15;
 
     private List<GameObject> pointsList = new List<GameObject>();
 
