@@ -52,7 +52,6 @@ public class GridManager : MonoBehaviour
                 go.transform.name = gridTilePref.transform.name + "_" + (tileNumber).ToString();
 
                 go.GetComponent<Tile>().SetValues(col, row);
-                Debug.Log(col + "-" + row);
 
                 grid.Add(go);
 

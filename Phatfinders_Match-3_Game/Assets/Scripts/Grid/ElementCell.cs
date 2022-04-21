@@ -51,6 +51,11 @@ public class ElementCell : MonoBehaviour
         return false;
     }
 
+    public void DisableElement()
+    {
+        ElementsGenerator.RestartPiece(this.gameObject);
+    }
+
     // --------------------------
 
     void ChageElement()

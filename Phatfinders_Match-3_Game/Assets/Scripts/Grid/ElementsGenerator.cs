@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,26 +11,23 @@ public class ElementsGenerator : MonoBehaviour
 
     // =============================
 
-    static Queue<GameObject> elementsQueue;
+    static List<GameObject> elementsList;
+
     static GridManager gridGenerator;
 
     static GameObject[] spawnTrans;
-
-    private GameObject spawnParent;
 
     // =============================
 
     public void Awake()
     {
         gridGenerator = GetComponent<GridManager>();
-        elementsQueue = new Queue<GameObject>();
 
-        // ===================
-        // Create Objects:
+        elementsList = new List<GameObject>();
 
         GameObject elementsParent = new GameObject();
         elementsParent.transform.parent = this.transform;
-        elementsParent.transform.name = "Elements Parent";
+        elementsParent.transform.name = "Elements Parent Stack";
 
         numberOfElements = gridGenerator.grid.Count;
 
@@ -43,13 +39,13 @@ public class ElementsGenerator : MonoBehaviour
 
             go.SetActive(false);
 
-            elementsQueue.Enqueue(go);
+            elementsList.Add(go);
         }
 
         // ====================
         // Create the Spawns:
 
-        spawnParent = new GameObject();
+        var spawnParent = new GameObject();
         spawnParent.transform.parent = this.transform;
         spawnParent.transform.localPosition = Vector3.zero;
         spawnParent.transform.name = "Spawn Parent";
@@ -68,13 +64,26 @@ public class ElementsGenerator : MonoBehaviour
     static public ElementCell RespawnPiece(int column)
     {
         GameObject piece;
-        piece = elementsQueue.Dequeue();
+        piece = elementsList[0];
+
+        elementsList.Remove(piece);
 
         piece.transform.position = spawnTrans[column].transform.position;
 
         piece.SetActive(true);
-        elementsQueue.Enqueue(piece);
+
+        elementsList.Add(piece);
 
         return piece.GetComponent<ElementCell>();
+    }
+
+    static public void RestartPiece(GameObject piece)
+    {
+        elementsList.Remove(piece);
+
+        piece.SetActive(false);
+
+        elementsList.Insert(0, piece);
+
     }
 }
