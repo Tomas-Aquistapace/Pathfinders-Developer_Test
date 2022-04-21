@@ -3,15 +3,21 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Grid Manager")]
+    [SerializeField] private GridManager gridManager;
+
     [Header("Game Controller")]
     [Range(0, 180)]
     [SerializeField] private float maxTime = 60f;
     [SerializeField] private float timer = 0f;
     [SerializeField] private TextMeshProUGUI timerTexts;
+    [SerializeField] private GameObject menuLayer;
 
     [Header("Points")]
     [SerializeField] private TextMeshProUGUI[] pointsTexts;
-    [SerializeField] private int[] points;
+    private int[] points;
+
+    private bool stopGame = true;
 
     // ------------------------
 
@@ -30,6 +36,17 @@ public class GameManager : MonoBehaviour
         timer = maxTime;
 
         points = new int[pointsTexts.Length];
+
+        stopGame = true;
+        menuLayer.SetActive(true);
+
+        for (int i = 0; i < points.Length; i++)
+        {
+            points[i] = 0;
+            pointsTexts[i].text = "0";
+        }
+
+        timerTexts.text = maxTime.ToString();
     }
 
     private void Update()
@@ -41,13 +58,16 @@ public class GameManager : MonoBehaviour
 
     private void UpdateTimer()
     {
-        timer -= Time.deltaTime;
-
-        timerTexts.text = timer.ToString("0");
-
-        if (timer < 0)
+        if (!stopGame)
         {
-            RestartGame();
+            timer -= Time.deltaTime;
+
+            timerTexts.text = timer.ToString("0");
+
+            if (timer < 0)
+            {
+                CallMenu();
+            }
         }
     }
 
@@ -59,9 +79,29 @@ public class GameManager : MonoBehaviour
 
     // ------------------------
 
-    private void RestartGame()
+    public void CallMenu()
     {
-        timer = 0f;
+        menuLayer.SetActive(true);
+
+        stopGame = true;
+
+        gridManager.CleanGrid();
+        gridManager.StartGrid(false);
     }
 
+    public void StartGame()
+    {
+        menuLayer.SetActive(false);
+        stopGame = false;
+
+        gridManager.StartGrid(true);
+
+        timer = maxTime;
+
+        for (int i = 0; i < points.Length; i++)
+        {
+            points[i] = 0;
+            pointsTexts[i].text = "0";
+        }
+    }
 }

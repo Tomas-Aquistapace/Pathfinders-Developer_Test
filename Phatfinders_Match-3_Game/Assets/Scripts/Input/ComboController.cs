@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConnectElements : MonoBehaviour
+public class ComboController : MonoBehaviour
 {
     [Header("Context")]
     [SerializeField] private LineRendererPath lineRendererPath;

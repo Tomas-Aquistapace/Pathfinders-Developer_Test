@@ -76,7 +76,7 @@ public class Tile : MonoBehaviour
     {
         if (tileState == State.Full)
         {
-            elementInTile.DisableElement();
+            elementInTile.EarnElement();
             elementInTile = null;
         }
     }
@@ -90,6 +90,14 @@ public class Tile : MonoBehaviour
     private void OnMouseExit()
     {
         spriteRenderer.color = Color.white;        
+    }
+
+    public void CleanTile()
+    {
+        elementInTile.RestartElement();
+        elementInTile = null;
+
+        tileState = State.Empty;
     }
 
     // -------------------------------------------

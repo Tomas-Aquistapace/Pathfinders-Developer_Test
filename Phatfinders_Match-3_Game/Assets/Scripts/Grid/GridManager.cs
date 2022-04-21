@@ -16,10 +16,12 @@ public class GridManager : MonoBehaviour
 
     private GameObject tilesParent;
 
-    private ElementsGenerator elementGenerator;
-
     [HideInInspector] public int gridSizeX = 0;
     [HideInInspector] public int gridSizeY = 0;
+
+    // -------------------------------
+
+    private bool startMovement = false;
 
     // -------------------------------
     // Tools:
@@ -75,31 +77,53 @@ public class GridManager : MonoBehaviour
         }
     }
 
+    public void StartGrid(bool state)
+    {
+        startMovement = state;
+        this.gameObject.SetActive(state);
+    }
+
+    public void CleanGrid()
+    {
+        for (int col = 0; col < gridSizeX; col++)
+        {
+            for (int row = 0; row < gridSizeY; row++)
+            {
+                columns[col][row].CleanTile();
+            }
+        }        
+    }
+
     // ------------------------------
     // 
 
     private void Awake()
     {
-        elementGenerator = GetComponent<ElementsGenerator>();
-
         gridSizeX = (int)gridSize.x;
         gridSizeY = (int)gridSize.y;
 
         CreateColumns();
+
+
+        this.gameObject.SetActive(false);
+
     }
 
     private void Update()
     {
         // utilizar acá un for con todos los tiles para que vayan en orden
 
-        for (int col = 0; col < gridSizeX; col++)
+        if(startMovement)
         {
-            for (int row = 0; row < gridSizeY; row++)
+            for (int col = 0; col < gridSizeX; col++)
             {
-                int lastRow = row - 1;
-                if (lastRow <= 0) { lastRow = 0; }
+                for (int row = 0; row < gridSizeY; row++)
+                {
+                    int lastRow = row - 1;
+                    if (lastRow <= 0) { lastRow = 0; }
 
-                columns[col][row].UpdateTile(ref columns[col][lastRow], col, row);
+                    columns[col][row].UpdateTile(ref columns[col][lastRow], col, row);
+                }
             }
         }
     }

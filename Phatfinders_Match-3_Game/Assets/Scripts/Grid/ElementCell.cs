@@ -40,11 +40,6 @@ public class ElementCell : MonoBehaviour
         ChageElement();
     }
 
-    private void OnDisable()
-    {
-        
-    }
-
     public bool MoveElement(Vector3 finalPos)
     {
         if(elementState == State.Waiting)
@@ -55,11 +50,18 @@ public class ElementCell : MonoBehaviour
         return false;
     }
 
-    public void DisableElement()
+    public void EarnElement()
     {
         ElementsGenerator.RestartPiece(this.gameObject);
 
         EarnPoints?.Invoke(elementID, totalPoints);
+    }
+
+    public void RestartElement()
+    {
+        ElementsGenerator.RestartPiece(this.gameObject);
+
+        StopCoroutine(Move(Vector3.zero));
     }
 
     // --------------------------
@@ -69,6 +71,8 @@ public class ElementCell : MonoBehaviour
         elementID = UnityEngine.Random.Range(0, spritesElem.Length);
 
         spriteRenderer.sprite = spritesElem[elementID];
+
+        elementState = State.Waiting;
     }
 
     IEnumerator Move(Vector3 finalPos)
