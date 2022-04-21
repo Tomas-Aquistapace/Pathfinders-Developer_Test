@@ -76,8 +76,9 @@ public class Tile : MonoBehaviour
     {
         if (tileState == State.Full)
         {
-            elementInTile.DisableElement();
-            elementInTile = null;
+            ConnectElements.ActivatePoint(this.transform.position);
+            //elementInTile.DisableElement();
+            //elementInTile = null;
         }
         else
         {
