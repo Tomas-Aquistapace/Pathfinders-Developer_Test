@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +7,7 @@ public class LineRendererPath : MonoBehaviour
     [SerializeField] private GameObject pointPref;
     [SerializeField] private int maxMatchTouchs = 15;
 
-    private List<GameObject> pointsList;
+    private List<GameObject> pointsList = new List<GameObject>();
 
     private LineRenderer lineRenderer;
     private GameObject pointsParent;
@@ -19,8 +18,6 @@ public class LineRendererPath : MonoBehaviour
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.enabled = false;
-
-        pointsList = new List<GameObject>();
 
         pointsParent = new GameObject();
         pointsParent.transform.parent = this.transform;

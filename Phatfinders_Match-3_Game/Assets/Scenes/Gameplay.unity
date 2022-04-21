@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28322058}
   - component: {fileID: 28322059}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34968771}
   - component: {fileID: 34968772}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 133958581}
   - component: {fileID: 133958583}
   - component: {fileID: 133958582}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 134066357}
   - component: {fileID: 134066359}
   - component: {fileID: 134066358}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 297763438}
   - component: {fileID: 297763440}
   - component: {fileID: 297763439}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 298566922}
   - component: {fileID: 298566924}
   - component: {fileID: 298566923}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,7 +709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318724969}
   - component: {fileID: 318724970}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327520529}
   - component: {fileID: 327520530}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 331636420}
   - component: {fileID: 331636422}
   - component: {fileID: 331636421}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,7 +955,7 @@ GameObject:
   - component: {fileID: 337271483}
   - component: {fileID: 337271485}
   - component: {fileID: 337271484}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1031,7 +1031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348411889}
   - component: {fileID: 348411890}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 349047184}
   - component: {fileID: 349047186}
   - component: {fileID: 349047185}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1192,7 +1192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 360070356}
   - component: {fileID: 360070357}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1276,7 +1276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388507151}
   - component: {fileID: 388507152}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,7 +1361,7 @@ GameObject:
   - component: {fileID: 427683850}
   - component: {fileID: 427683852}
   - component: {fileID: 427683851}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1437,7 +1437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465434016}
   - component: {fileID: 465434017}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1521,7 +1521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 479997989}
   - component: {fileID: 479997990}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1795,7 +1795,7 @@ GameObject:
   - component: {fileID: 542321647}
   - component: {fileID: 542321649}
   - component: {fileID: 542321648}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 582388859}
   - component: {fileID: 582388861}
   - component: {fileID: 582388860}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2063,12 +2063,12 @@ LineRenderer:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.091836736
-        inSlope: 0.45211893
-        outSlope: 0.45211893
+        value: 0.14285713
+        inSlope: 0.11207189
+        outSlope: 0.11207189
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.09027785
+        inWeight: 0.13657415
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -2135,7 +2135,7 @@ GameObject:
   - component: {fileID: 687773604}
   - component: {fileID: 687773606}
   - component: {fileID: 687773605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2211,7 +2211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759972495}
   - component: {fileID: 759972496}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2295,7 +2295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 796609683}
   - component: {fileID: 796609684}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2380,7 +2380,7 @@ GameObject:
   - component: {fileID: 812421658}
   - component: {fileID: 812421660}
   - component: {fileID: 812421659}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2457,7 +2457,7 @@ GameObject:
   - component: {fileID: 831072401}
   - component: {fileID: 831072403}
   - component: {fileID: 831072402}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2533,7 +2533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 835822200}
   - component: {fileID: 835822201}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2617,7 +2617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 859482981}
   - component: {fileID: 859482982}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2702,7 +2702,7 @@ GameObject:
   - component: {fileID: 872315609}
   - component: {fileID: 872315611}
   - component: {fileID: 872315610}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2779,7 +2779,7 @@ GameObject:
   - component: {fileID: 951448959}
   - component: {fileID: 951448961}
   - component: {fileID: 951448960}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2855,7 +2855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 956970981}
   - component: {fileID: 956970982}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2940,7 +2940,7 @@ GameObject:
   - component: {fileID: 972431484}
   - component: {fileID: 972431486}
   - component: {fileID: 972431485}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3016,7 +3016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001609978}
   - component: {fileID: 1001609979}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3100,7 +3100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1043832392}
   - component: {fileID: 1043832393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3185,7 +3185,7 @@ GameObject:
   - component: {fileID: 1052532441}
   - component: {fileID: 1052532443}
   - component: {fileID: 1052532442}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3262,7 +3262,7 @@ GameObject:
   - component: {fileID: 1110073986}
   - component: {fileID: 1110073988}
   - component: {fileID: 1110073987}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3338,7 +3338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1126143987}
   - component: {fileID: 1126143988}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3423,7 +3423,7 @@ GameObject:
   - component: {fileID: 1159149082}
   - component: {fileID: 1159149084}
   - component: {fileID: 1159149083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3499,7 +3499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1203090152}
   - component: {fileID: 1203090153}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3583,7 +3583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1203207084}
   - component: {fileID: 1203207085}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3735,7 +3735,7 @@ GameObject:
   - component: {fileID: 1298182258}
   - component: {fileID: 1298182260}
   - component: {fileID: 1298182259}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3812,7 +3812,7 @@ GameObject:
   - component: {fileID: 1336396389}
   - component: {fileID: 1336396391}
   - component: {fileID: 1336396390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3888,7 +3888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355250933}
   - component: {fileID: 1355250934}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3973,7 +3973,7 @@ GameObject:
   - component: {fileID: 1364599147}
   - component: {fileID: 1364599149}
   - component: {fileID: 1364599148}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4050,7 +4050,7 @@ GameObject:
   - component: {fileID: 1386715023}
   - component: {fileID: 1386715025}
   - component: {fileID: 1386715024}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4126,7 +4126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405631989}
   - component: {fileID: 1405631990}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4211,7 +4211,7 @@ GameObject:
   - component: {fileID: 1421376081}
   - component: {fileID: 1421376083}
   - component: {fileID: 1421376082}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4287,7 +4287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1492208723}
   - component: {fileID: 1492208724}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4372,7 +4372,7 @@ GameObject:
   - component: {fileID: 1518596627}
   - component: {fileID: 1518596629}
   - component: {fileID: 1518596628}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4449,7 +4449,7 @@ GameObject:
   - component: {fileID: 1533176936}
   - component: {fileID: 1533176938}
   - component: {fileID: 1533176937}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4556,7 +4556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578931715}
   - component: {fileID: 1578931716}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4641,7 +4641,7 @@ GameObject:
   - component: {fileID: 1581197857}
   - component: {fileID: 1581197859}
   - component: {fileID: 1581197858}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4717,7 +4717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1583617194}
   - component: {fileID: 1583617195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4801,7 +4801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630443047}
   - component: {fileID: 1630443048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4886,7 +4886,7 @@ GameObject:
   - component: {fileID: 1632359076}
   - component: {fileID: 1632359078}
   - component: {fileID: 1632359077}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4963,7 +4963,7 @@ GameObject:
   - component: {fileID: 1700985560}
   - component: {fileID: 1700985562}
   - component: {fileID: 1700985561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5106,7 +5106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730916193}
   - component: {fileID: 1730916194}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5190,7 +5190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747563331}
   - component: {fileID: 1747563332}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5274,7 +5274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1772068817}
   - component: {fileID: 1772068818}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5359,7 +5359,7 @@ GameObject:
   - component: {fileID: 1839196904}
   - component: {fileID: 1839196906}
   - component: {fileID: 1839196905}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5436,7 +5436,7 @@ GameObject:
   - component: {fileID: 1843834983}
   - component: {fileID: 1843834985}
   - component: {fileID: 1843834984}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5512,7 +5512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882747799}
   - component: {fileID: 1882747800}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5597,7 +5597,7 @@ GameObject:
   - component: {fileID: 1895606108}
   - component: {fileID: 1895606110}
   - component: {fileID: 1895606109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5674,7 +5674,7 @@ GameObject:
   - component: {fileID: 1903618860}
   - component: {fileID: 1903618862}
   - component: {fileID: 1903618861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5785,6 +5785,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRendererPath: {fileID: 657603573}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  inCombo: 0
+  elementID: 0
+  minComboToActivate: 3
+  maxDistance: 1.5
+  tilesCombo: []
 --- !u!1 &1931185121
 GameObject:
   m_ObjectHideFlags: 0
@@ -5826,7 +5834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1945228435}
   - component: {fileID: 1945228436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5910,7 +5918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948530484}
   - component: {fileID: 1948530485}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5995,7 +6003,7 @@ GameObject:
   - component: {fileID: 1980105888}
   - component: {fileID: 1980105887}
   - component: {fileID: 1980105886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6072,7 +6080,7 @@ GameObject:
   - component: {fileID: 2025133311}
   - component: {fileID: 2025133313}
   - component: {fileID: 2025133312}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6149,7 +6157,7 @@ GameObject:
   - component: {fileID: 2054136913}
   - component: {fileID: 2054136915}
   - component: {fileID: 2054136914}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6225,7 +6233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063733687}
   - component: {fileID: 2063733688}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6309,7 +6317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2099480520}
   - component: {fileID: 2099480521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6393,7 +6401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2103476688}
   - component: {fileID: 2103476689}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6477,7 +6485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119849082}
   - component: {fileID: 2119849083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6561,7 +6569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2138408473}
   - component: {fileID: 2138408474}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

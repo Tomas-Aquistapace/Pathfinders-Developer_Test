@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8371056871738462536}
   - component: {fileID: 8371056871738462537}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: panelInset_beigeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8371056872044182083}
   - component: {fileID: 8371056872044182084}
   - component: {fileID: 8215331540085442363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

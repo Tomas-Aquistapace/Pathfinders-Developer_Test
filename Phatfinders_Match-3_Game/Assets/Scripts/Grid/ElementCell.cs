@@ -84,4 +84,11 @@ public class ElementCell : MonoBehaviour
 
         elementState = State.Stop;
     }
+
+    // --------------------------
+
+    public int GetID()
+    {
+        return elementID;
+    }
 }

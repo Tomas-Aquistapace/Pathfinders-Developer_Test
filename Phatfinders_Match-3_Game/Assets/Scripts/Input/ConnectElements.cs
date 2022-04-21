@@ -1,39 +1,80 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ConnectElements : MonoBehaviour
 {
+    [Header("Context")]
     [SerializeField] private LineRendererPath lineRendererPath;
+    [SerializeField] private LayerMask layerMask;
 
-    static public LineRendererPath lrp;
+    [Header("Actual Combo")]
+    [SerializeField] private bool inCombo = false;
+    [SerializeField] private int elementID = 0;
+    [SerializeField] private int minComboToActivate = 3;
+    [SerializeField] private float maxDistance = 3f;
+    [SerializeField] private List<Tile> tilesCombo = new List<Tile>();
 
-    private void Awake()
+    // ---------------------------
+
+    private void ActivatePoint(Vector3 newPosition)
     {
-        lrp = lineRendererPath;
+        lineRendererPath.InstantiatePoint(newPosition);
     }
 
-    static public void ActivatePoint(Vector3 newPosition)
+    private void DisablePoints()
     {
-        lrp.InstantiatePoint(newPosition);
-    }
+        lineRendererPath.DisablePoints();
 
-    static public void DisablePoints()
-    {
-        lrp.DisablePoints();
+        elementID = 0;
+        inCombo = false;
+        tilesCombo.Clear();
     }
 
     private void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
-        if (hit.collider == null)
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            if(Input.GetKeyDown(KeyCode.Mouse0))
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 50, layerMask);
+            
+            if(hit.collider != null)
             {
-                DisablePoints();
+                Tile actualTile = hit.transform.GetComponent<Tile>();
+                
+                if (!tilesCombo.Contains(actualTile))
+                {
+                    if (actualTile.HableToActivate())
+                    {
+                        if (!inCombo)
+                        {
+                            elementID = actualTile.GetElementID();
+                            inCombo = true;
+
+                            tilesCombo.Add(actualTile);
+
+                            ActivatePoint(actualTile.GetPosition());
+                        }
+                        else
+                        {
+                            if (elementID == actualTile.GetElementID() &&
+                                Vector3.Distance(actualTile.GetPosition(), tilesCombo[tilesCombo.Count - 1].GetPosition()) <= maxDistance)
+                            {
+                                tilesCombo.Add(actualTile);
+                                ActivatePoint(actualTile.GetPosition());
+                            }
+                        }
+                    }
+                }
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Mouse1))
+        else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
+            if(tilesCombo.Count >= minComboToActivate)
+            {
+                for (int i = 0; i < tilesCombo.Count; i++)
+                {
+                    tilesCombo[i].ClickEvent();
+                }
+            }
             DisablePoints();
         }
     }

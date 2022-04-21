@@ -72,18 +72,12 @@ public class Tile : MonoBehaviour
     // ----------------------------
     // Click on the Tile:
 
-    private void OnMouseDown()
+    public void ClickEvent()
     {
         if (tileState == State.Full)
         {
-            ConnectElements.ActivatePoint(this.transform.position);
-            //elementInTile.DisableElement();
-            //elementInTile = null;
-        }
-        else
-        {
-
-
+            elementInTile.DisableElement();
+            elementInTile = null;
         }
     }
 
@@ -100,9 +94,32 @@ public class Tile : MonoBehaviour
 
     // -------------------------------------------
 
+    public bool HableToActivate()
+    {
+        return (tileState == State.Full);
+    }
+
+    public int GetElementID()
+    {
+        if (elementInTile)
+            return elementInTile.GetID();
+        else
+            return 0;
+    }
+
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
+
     public void SetValues(int _column, int _row)
     {
         column = _column;
         row = _row;
+    }
+
+    public bool EqualTo(int _column, int _row)
+    {
+        return (column == _column && row == _row);
     }
 }
