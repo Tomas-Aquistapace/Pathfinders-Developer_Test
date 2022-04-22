@@ -12,8 +12,12 @@ public class ElementCell : MonoBehaviour
     [SerializeField] private int elementID = 0;
     [SerializeField] private int totalPoints = 10;
     [SerializeField] private float speed = 2;
+    [SerializeField] private float animDelay = 0.5f;
+
+    [SerializeField] private GameObject particlePref;
 
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     public enum State
     {
@@ -29,6 +33,7 @@ public class ElementCell : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
 
         elementState = State.Waiting;
 
@@ -44,6 +49,7 @@ public class ElementCell : MonoBehaviour
     {
         if(elementState == State.Waiting)
         {
+            StopCoroutine(Move(finalPos));
             StartCoroutine(Move(finalPos));
             return true;
         }
@@ -53,6 +59,9 @@ public class ElementCell : MonoBehaviour
     public void EarnElement()
     {
         ElementsGenerator.RestartPiece(this.gameObject);
+
+        ActivateParticles();
+        animator.SetTrigger("Destroy");
 
         EarnPoints?.Invoke(elementID, totalPoints);
     }
@@ -66,7 +75,7 @@ public class ElementCell : MonoBehaviour
 
     // --------------------------
 
-    void ChageElement()
+    private void ChageElement()
     {
         elementID = UnityEngine.Random.Range(0, spritesElem.Length);
 
@@ -82,6 +91,7 @@ public class ElementCell : MonoBehaviour
         Vector3 initialPos = transform.localPosition;
 
         elementState = State.Moving;
+        animator.SetBool("Moving", true);
 
         while (time < 1)
         {
@@ -93,6 +103,18 @@ public class ElementCell : MonoBehaviour
         }
 
         elementState = State.Stop;
+
+        yield return new WaitForSeconds(animDelay);
+
+        animator.SetBool("Moving", false);
+    }
+
+    private void ActivateParticles()
+    {
+        var go = Instantiate(particlePref);
+        go.transform.position = this.transform.localPosition;
+
+        Destroy(go, 1f);
     }
 
     // --------------------------

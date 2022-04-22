@@ -104,4 +104,9 @@ public class GameManager : MonoBehaviour
             pointsTexts[i].text = "0";
         }
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

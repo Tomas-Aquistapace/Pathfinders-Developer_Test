@@ -23,7 +23,7 @@ public class LineRendererPath : MonoBehaviour
         pointsParent.transform.name = "Points of the Line";
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (lineRenderer.enabled)
         {
